@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Мій перший WPF застосунок" Height="450" Width="800">
+    <StackPanel Margin="10">
+        <TextBlock Text="Введіть ваше ім'я:" FontSize="16" Margin="20,10,0,10"/>
+        <TextBox x:Name="txtName" Width="343" Height="19" Margin="20,0,0,10" FontSize="16"/>
+        <TextBlock Text="Оберіть гру:" FontSize="16" Margin="20,10,0,10"/>
+        <ComboBox x:Name="cmbGroup" FontSize="14" Margin="0,15,5,10">
+            <ComboBoxItem Content="Група 721"/>
+            <ComboBoxItem Content="Група 731"/>
+            <ComboBoxItem Content="Група 741"/>
+        </ComboBox>
 
-    </Grid>
+        <Button Content="Підтвердити" Margin="20,10,0,10" Background="#0078D7"
+                    Foreground="White" FontSize="14" 
+                    Click="GB_Click"/>
+
+        <TextBlock x:Name="txtResult" Text="" FontSize="16" Margin="20,10,0,10"
+                       Foreground="Green" TextAlignment="Center" />
+
+    </StackPanel>
 </Window>

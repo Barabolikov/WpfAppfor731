@@ -20,5 +20,13 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void GB_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+            string group = cmbGroup.SelectedItem?.ToString();
+
+            txtResult.Text = $"Привіт, {name}! Ви обрали групу: {group}";
+        }
     }
 }
